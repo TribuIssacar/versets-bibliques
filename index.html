@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Verset biblique du moment</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            text-align: center;
+            padding: 2rem;
+            background: #f9f8f7;
+            color: #333;
+        }
+        .verse {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            font-style: italic;
+            border-left: 4px solid #666;
+            padding-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verset biblique du moment</h1>
+    <div class="verse" id="verse"></div>
+
+    <script>
+        const versets = [
+            "Jean 3:16 - Car Dieu a tant aimé le monde qu'il a donné son Fils unique...",
+            "Psaume 23:1 - L'Éternel est mon berger, je ne manquerai de rien.",
+            "Philippiens 4:13 - Je puis tout par celui qui me fortifie.",
+            "Ésaïe 40:31 - Ceux qui espèrent en l'Éternel renouvellent leur force.",
+            "Romains 8:28 - Nous savons que toutes choses contribuent au bien de ceux qui aiment Dieu.",
+            "Matthieu 11:28 - Venez à moi, vous tous qui êtes fatigués et chargés.",
+            "Proverbes 3:5 - Confie-toi en l'Éternel de tout ton cœur.",
+            "Jean 14:6 - Je suis le chemin, la vérité et la vie."
+        ];
+
+        function versetAleatoire() {
+            const index = Math.floor(Math.random() * versets.length);
+            return versets[index];
+        }
+
+        document.getElementById('verse').textContent = versetAleatoire();
+    </script>
+</body>
+</html>
